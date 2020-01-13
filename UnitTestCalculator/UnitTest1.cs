@@ -73,5 +73,19 @@ namespace UnitTestCalculator
 
         }
 
+        [TestMethod]
+        [ExpectedException(typeof(TooLargeNumberException))]
+        public void TestDivisionByTooLargeNumber()
+        {
+            //Arrange
+            Calculator c = new Calculator();
+            int tal1 = 20;
+            int tal2 = 200;
+            int resultat = 0;
+
+            // Act & Assert
+            resultat = c.Division(tal1, tal2);
+
+        }
     }
 }

@@ -20,6 +20,8 @@ namespace Sandbox
 
         public int Division(int tal1, int tal2)
         {
+            if (tal2>100)
+                throw new TooLargeNumberException("Tallet er for stort");
             return tal1 / tal2;
         }
 
